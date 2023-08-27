@@ -17,8 +17,6 @@ import org.springframework.util.DigestUtils;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import java.util.ArrayList;
-
 import static com.lango.project.constant.UserConstant.ADMIN_ROLE;
 import static com.lango.project.constant.UserConstant.USER_LOGIN_STATE;
 
