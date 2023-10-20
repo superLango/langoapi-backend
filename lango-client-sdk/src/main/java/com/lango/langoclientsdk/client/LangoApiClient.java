@@ -19,7 +19,7 @@ import java.util.Map;
  */
 public class LangoApiClient {
 
-    public static final String GATEWAY_HOST = "http://101.43.234.93:8090";
+    public static final String GATEWAY_HOST = "http://**.**.**.**:8090";
     private String accessKey;
     private String secretKey;
 
