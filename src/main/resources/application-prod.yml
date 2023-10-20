@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://101.43.234.93:3306/langoapi
-    username: langoapi
-    password: WZtY3xbt6tmDf2Dn
+    url: jdbc:mysql://**.**.**.**:3306/username
+    username: username
+    password: password
 
 server:
   port: 7529
@@ -11,5 +11,5 @@ server:
     context-path: /api
 #    session:
 #      cookie:
-#        domain: lg-sp.cn
+#        domain: www.**.com
   address: 0.0.0.0
