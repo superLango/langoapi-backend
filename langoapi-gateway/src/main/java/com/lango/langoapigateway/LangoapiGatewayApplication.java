@@ -16,7 +16,6 @@ import org.springframework.context.annotation.Bean;
         HibernateJpaAutoConfiguration.class
 })
 @EnableDubbo
-
 public class LangoapiGatewayApplication {
 
     public static void main(String[] args) {

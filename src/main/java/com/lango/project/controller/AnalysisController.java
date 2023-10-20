@@ -7,7 +7,6 @@ import com.lango.project.common.BaseResponse;
 import com.lango.project.common.ErrorCode;
 import com.lango.project.common.ResultUtils;
 import com.lango.project.exception.BusinessException;
-import com.lango.project.mapper.InterfaceInfoMapper;
 import com.lango.project.mapper.UserInterfaceInfoMapper;
 import com.lango.project.model.entity.InterfaceInfo;
 import com.lango.project.model.entity.UserInterfaceInfo;
@@ -20,11 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * 分析控制器

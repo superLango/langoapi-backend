@@ -5,7 +5,8 @@ spring:
     gateway:
       routes:
         - id: api_route
-          uri: http://localhost:8123
+          uri: http://101.43.234.93:8123
+#          uri: http://localhost:8123
           predicates:
             - Path=/api/**
       default-filters:
@@ -18,4 +19,5 @@ dubbo:
     port: -1
   registry:
     id: nacos-registry
-    address: nacos://localhost:8848
+    address: nacos://101.43.234.93:8848
+#    address: nacos://localhost:8848

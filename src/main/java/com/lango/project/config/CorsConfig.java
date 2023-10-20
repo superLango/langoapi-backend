@@ -14,14 +14,28 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        // 覆盖所有请求
+//        // 覆盖所有请求
+//        registry.addMapping("/**")
+//                // 允许发送 Cookie
+//                .allowCredentials(true)
+//                // 放行哪些域名（必须用 patterns，否则 * 会和 allowCredentials 冲突）
+//                .allowedOriginPatterns("*")
+//                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+//                .allowedHeaders("*")
+//                .exposedHeaders("*");
+
+        //设置允许跨域的路径
         registry.addMapping("/**")
-                // 允许发送 Cookie
+                //设置允许跨域请求的域名
+                //当**Credentials为true时，**Origin不能为星号，需为具体的ip地址【如果接口不带cookie,ip无需设成具体ip】
+                .allowedOrigins("http://localhost:3000","http://localhost:8000","http://127.0.0.1:3000","http://127.0.0.1:8000","http://101.43.234.93:3000","http://www.lg-sp.cn","http://lg-sp.cn","http://api-backend.lg-sp.cn")
+                //是否允许证书 不再默认开启
                 .allowCredentials(true)
-                // 放行哪些域名（必须用 patterns，否则 * 会和 allowCredentials 冲突）
-                .allowedOriginPatterns("*")
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                //设置允许的方法
+                .allowedMethods("*")
                 .allowedHeaders("*")
-                .exposedHeaders("*");
+                .exposedHeaders("*")
+                //跨域允许时间
+                .maxAge(3600);
     }
 }

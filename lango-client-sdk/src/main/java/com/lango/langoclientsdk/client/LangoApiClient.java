@@ -6,11 +6,10 @@ import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONUtil;
 import com.lango.langoclientsdk.model.User;
+import com.lango.langoclientsdk.utils.SignUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static com.lango.langoclientsdk.utils.SignUtils.genSign;
 
 /**
  * 调用第三方接口的客户端
@@ -20,7 +19,7 @@ import static com.lango.langoclientsdk.utils.SignUtils.genSign;
  */
 public class LangoApiClient {
 
-    public static final String GATEWAY_HOST = "http://localhost:8090";
+    public static final String GATEWAY_HOST = "http://101.43.234.93:8090";
     private String accessKey;
     private String secretKey;
 
@@ -55,7 +54,7 @@ public class LangoApiClient {
         hashMap.put("nonce", RandomUtil.randomNumbers(4));
         hashMap.put("body", body);
         hashMap.put("timestamp", String.valueOf(System.currentTimeMillis() / 1000));
-        hashMap.put("sign", genSign(body, secretKey));
+        hashMap.put("sign", SignUtils.genSign(body, secretKey));
         return hashMap;
     }
 
